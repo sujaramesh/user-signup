@@ -1,0 +1,62 @@
+<!DOCTYPE html>		
+<html>
+    <head>
+        <h1 style="color:blue">User SignUp Form</h1>
+        <style>
+            .error {color:red;}
+        </style>
+    </head>
+
+    <body style="background-color:LightGray">
+    <table>
+        <form action="/validate" method = "POST">
+	<tbody>				
+	    <tr>
+            <td>
+                <label for="user-name">Username</label>
+            </td>
+            <td>
+	            <input id="user-name" type="text" name="user_name" value="{{usrname}}">
+       	        <span class="error">{{err_name}}</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+	            <label for="pword">Password</label>
+            </td>
+	        <td>    
+ 	            <input id="pword" type="password" name="password">
+       	        <span class="error">{{err_pswd}}</span>
+	        </td>
+        </tr>
+
+        <tr>
+            <td>	  	
+	            <label for="vpword">Verify Passwod</label>
+            </td>
+	        <td>
+               <input id="vpword" type="password" name="vpassword">
+       	       <span class="error">{{err_vpswd}}</span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>	  	
+	            <label for="eml">Email (optional)</label>
+            </td>
+            <td>
+	            <input id="eml" type="text" name="email" value="{{emailid}}">
+       	        <span class="error">{{err_email}}</span>
+            </td>
+        </tr>
+
+
+    </tbody>
+    </table>
+    <p>        
+        <input type="submit" value="Submit">
+    </p>    
+        </form>
+    </body>
+</html>
